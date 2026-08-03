@@ -1,0 +1,11 @@
+# requirements.txt
+streamlit
+pandas
+openpyxl
+plotly
+scikit-learn
+fpdf2
+pytest
+pytest-cov
+redis
+celery
