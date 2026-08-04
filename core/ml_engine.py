@@ -1,83 +1,91 @@
+import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error, accuracy_score, classification_report
-from sklearn.metrics import root_mean_squared_error
-import pandas as pd
+from sklearn.metrics import r2_score, mean_absolute_error, root_mean_squared_error, accuracy_score, classification_report
 
 class MLEngine:
-    def __init__(self, df, target, problem_type=None):
-        self.df = df.dropna(subset=[target])  # eliminar filas sin target
+    def __init__(self, df, target, problem_type=None, test_size=0.2, random_state=42):
+        # Eliminar filas donde el target es nulo
+        self.df = df.dropna(subset=[target]).copy()
         self.target = target
         self.problem_type = problem_type or self._detect_problem_type()
+        self.test_size = test_size
+        self.random_state = random_state
         self.model = None
         self.preprocessor = None
-        self.X_train, self.X_test, self.y_train, self.y_test = None, None, None, None
-        
+        self.X_train = self.X_test = self.y_train = self.y_test = None
+
     def _detect_problem_type(self):
         if pd.api.types.is_numeric_dtype(self.df[self.target]):
             return 'regression'
         else:
             return 'classification'
-    
+
     def preprocess_data(self):
         X = self.df.drop(columns=[self.target])
         y = self.df[self.target]
-        # Separar numéricas y categóricas
-        num_cols = X.select_dtypes(include=['int64','float64']).columns.tolist()
-        cat_cols = X.select_dtypes(include=['object','category']).columns.tolist()
-        # Preprocesador: escala numéricas, codifica categóricas
-        self.preprocessor = ColumnTransformer(
-            transformers=[
-                ('num', StandardScaler(), num_cols),
-                ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols)
-            ])
-        # Split
+
+        num_cols = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
+        cat_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
+
+        num_pipeline = Pipeline([
+            ('imputer', SimpleImputer(strategy='median')),
+            ('scaler', StandardScaler())
+        ])
+        cat_pipeline = Pipeline([
+            ('imputer', SimpleImputer(strategy='most_frequent')),
+            ('encoder', OneHotEncoder(handle_unknown='ignore', max_categories=20, sparse_output=False))
+        ])
+
+        self.preprocessor = ColumnTransformer([
+            ('num', num_pipeline, num_cols),
+            ('cat', cat_pipeline, cat_cols)
+        ])
+
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42)
-    
+            X, y, test_size=self.test_size, random_state=self.random_state)
+
     def train(self, model_name='random_forest'):
         if self.preprocessor is None:
             self.preprocess_data()
+
         if self.problem_type == 'regression':
-            if model_name == 'random_forest':
-                model = RandomForestRegressor(n_estimators=100, random_state=42)
-            else:
-                model = LinearRegression()
+            model = RandomForestRegressor(n_estimators=100, random_state=self.random_state) \
+                if model_name == 'random_forest' else LinearRegression()
         else:
-            if model_name == 'random_forest':
-                model = RandomForestClassifier(n_estimators=100, random_state=42)
-            else:
-                model = LogisticRegression(max_iter=1000)
-        
-        pipeline = Pipeline(steps=[('preprocessor', self.preprocessor),
-                                   ('model', model)])
-        pipeline.fit(self.X_train, self.y_train)
-        self.model = pipeline
+            model = RandomForestClassifier(n_estimators=100, random_state=self.random_state) \
+                if model_name == 'random_forest' else LogisticRegression(max_iter=1000)
+
+        self.model = Pipeline([
+            ('preprocessor', self.preprocessor),
+            ('model', model)
+        ])
+        self.model.fit(self.X_train, self.y_train)
         return self
-    
+
     def evaluate(self):
         preds = self.model.predict(self.X_test)
         if self.problem_type == 'regression':
             return {
                 'R2': r2_score(self.y_test, preds),
                 'MAE': mean_absolute_error(self.y_test, preds),
-                'RMSE': mean_squared_error(self.y_test, preds, squared=False)
+                'RMSE': root_mean_squared_error(self.y_test, preds)
             }
         else:
             return {
                 'Accuracy': accuracy_score(self.y_test, preds),
                 'Report': classification_report(self.y_test, preds, output_dict=True)
             }
-    
+
     def get_feature_importance(self):
         if hasattr(self.model.named_steps['model'], 'feature_importances_'):
             importances = self.model.named_steps['model'].feature_importances_
-            # Obtener nombres de características después del preprocesador
-            feature_names = (self.model.named_steps['preprocessor']
-                             .get_feature_names_out())
+            feature_names = self.model.named_steps['preprocessor'].get_feature_names_out()
             return dict(zip(feature_names, importances))
         return None
