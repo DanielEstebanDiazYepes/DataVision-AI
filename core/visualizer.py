@@ -1,7 +1,4 @@
-"""
-Visualizador principal de DataVision AI.
-Genera gráficos interactivos con Plotly, maneja datos sucios y usa tema claro.
-"""
+
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -14,11 +11,10 @@ from utils.logging_config import setup_logging
 logger = setup_logging()
 
 class Visualizer:
-    """Genera visualizaciones interactivas con Plotly."""
 
     @staticmethod
     def auto_plot(df, col, col_type):
-        """Gráfico automático según tipo de columna."""
+       
         logger.info(f"Creando auto_plot para columna '{col}' tipo '{col_type}'")
         if col_type == 'numérica':
             fig = px.histogram(df, x=col, title=f'Distribución de {col}',
@@ -41,7 +37,7 @@ class Visualizer:
 
     @staticmethod
     def missing_values_plot(missing_df):
-        """Gráfico de barras para valores nulos."""
+       
         logger.info("Creando gráfico de valores nulos")
         missing_positive = missing_df[missing_df['Nulos'] > 0]
         if missing_positive.empty:
@@ -56,7 +52,7 @@ class Visualizer:
 
     @staticmethod
     def outlier_plot(df, col, outliers):
-        """Box plot con outliers resaltados."""
+        
         logger.info(f"Creando box plot para outliers en '{col}'")
         fig = go.Figure()
         fig.add_trace(go.Box(y=df[col], name=col, boxpoints='outliers', marker_color='lightblue'))
@@ -91,14 +87,14 @@ class Visualizer:
             template='plotly_white',
             color_continuous_scale='RdBu_r',
             aspect='auto',
-            text_auto=True,        # mostrar valores
-            zmin=-1, zmax=1       # fijar escala
+            text_auto=True,        
+            zmin=-1, zmax=1       
         )
         return fig
 
     @staticmethod
     def time_series_plot(df, date_col, value_col, freq='D'):
-        """Serie temporal con conversión robusta de tipos."""
+     
         logger.info(f"Creando serie temporal: {date_col} vs {value_col} (freq={freq})")
         df_temp = df[[date_col, value_col]].copy()
         df_temp[date_col] = pd.to_datetime(df_temp[date_col], errors='coerce')
@@ -112,7 +108,7 @@ class Visualizer:
 
     @staticmethod
     def predictions_plot(engine):
-        """Gráfico de predicciones vs reales (sin WebGL, tema claro)."""
+       
         logger.info("Creando gráfico de predicciones")
         preds = engine.model.predict(engine.X_test)
         
@@ -164,7 +160,7 @@ class Visualizer:
 
     @staticmethod
     def feature_importance_plot(importance_dict):
-        """Top 10 importancia de características."""
+       
         logger.info("Creando gráfico de importancia de características")
         importance_df = pd.DataFrame(
             list(importance_dict.items()),
@@ -177,7 +173,7 @@ class Visualizer:
 
     @staticmethod
     def type_distribution_pie(type_counts):
-        """Gráfico de dona con distribución de tipos de datos."""
+        
         logger.info("Creando gráfico de pastel de tipos")
         fig = px.pie(values=type_counts.values, names=type_counts.index,
                      title='Distribución de Tipos de Datos', template='plotly_white',
@@ -187,7 +183,7 @@ class Visualizer:
 
     @staticmethod
     def distribution_plot(df, col, plot_type='histogram', bins=30):
-        """Histograma, box plot o violin plot."""
+       
         logger.info(f"Creando {plot_type} para '{col}'")
         if plot_type == 'histogram':
             fig = px.histogram(df, x=col, nbins=bins, title=f'Histograma de {col}',
@@ -240,7 +236,7 @@ class Visualizer:
 
     @staticmethod
     def scatter_matrix(df):
-        """Matriz de dispersión optimizada, sin warning de Plotly."""
+        
         logger.info("Creando matriz de dispersión")
         num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
         if len(num_cols) > 5:
@@ -269,7 +265,7 @@ class Visualizer:
                                              mode='markers', marker=dict(size=4, opacity=0.6, color='#1f4e79'),
                                              showlegend=False), row=i+1, col=j+1)
 
-        # Eliminar matches para evitar warning de Plotly
+     
         for r in range(1, n+1):
             for c in range(1, n+1):
                 fig.update_xaxes(matches=None, row=r, col=c)
@@ -285,7 +281,7 @@ class Visualizer:
 
     @staticmethod
     def pie_chart(df, cat_col, top_n=10):
-        """Gráfico de pastel con top N categorías."""
+        
         logger.info(f"Creando gráfico de pastel para {cat_col}")
         counts = df[cat_col].value_counts().head(top_n)
         if len(df[cat_col].unique()) > top_n:
