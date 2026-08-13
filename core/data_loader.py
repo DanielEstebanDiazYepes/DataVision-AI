@@ -1,7 +1,3 @@
-"""
-Módulo de carga de datos.
-Soporta CSV, Excel y JSON con detección automática de tipos y coerción inteligente.
-"""
 
 import pandas as pd
 import streamlit as st
