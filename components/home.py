@@ -65,7 +65,7 @@ def render_home():
     st.markdown("### 🚀 ¿Listo para comenzar?")
     st.markdown("Dirígete a la sección **📤 Cargar Datos** en el menú lateral para empezar.")
     
-    if st.button("✨ Comenzar Ahora", type="primary", use_container_width=True):
+    if st.button("✨ Comenzar Ahora", type="primary", width='stretch'):
         st.session_state.navigation = "📤 Cargar Datos"
         st.rerun()
     

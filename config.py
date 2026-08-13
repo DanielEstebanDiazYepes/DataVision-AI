@@ -11,8 +11,8 @@ APP_DESCRIPTION = "Plataforma inteligente de análisis de datos"
 
 # Configuración de página
 PAGE_CONFIG = {
-    "page_title": APP_NAME,
-    "page_icon": APP_ICON,
+    "page_title": "DataVision AI",
+    "page_icon": "📊",
     "layout": "wide",
     "initial_sidebar_state": "expanded"
 }

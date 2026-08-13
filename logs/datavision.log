@@ -1,0 +1,251 @@
+2026-08-13 07:59:30 | INFO     | DataVision | load_file | Iniciando carga de archivo: Book2.xlsx
+2026-08-13 07:59:30 | INFO     | DataVision | load_file | Archivo cargado: Book2.xlsx | Filas: 0 | Columnas: 1
+2026-08-13 07:59:30 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 07:59:30 | INFO     | DataVision | detect_column_types | Tipos detectados: {'OrderID,Date,Customer,Category,Product,Quantity,UnitPrice,TotalSales,Region,Status\nORD-101,2026-01-05,Ana Gómez,Tecnología,Laptop Pro 15,1,1200,1200,Norte,Completado\nORD-102,2026-01-08,Carlos Ruiz,Mobiliario,Silla Ergonómica,4,150,600,Sur,Completado\nORD-103,2026-01-12,Ana Gómez,Oficina,Resma Papel A4,10,5,50,Norte,Completado\nORD-104,2026-01-15,Elena M,Tecnología,Teclado Mecánico,2,80,160,Este,Pendiente\nORD-105,2026-01-20,Luis Vera,Mobiliario,Escritorio Ajustable,1,450,450,Oeste,Completado\nORD-106,2026-02-01,Carlos Ruiz,Tecnología,Monitor 4K,2,300,600,Sur,Completado\nORD-107,2026-02-03,Sofía Paez,Oficina,Archivador Metal,3,90,270,Norte,Completado\nORD-108,2026-02-10,Ana Gómez,Tecnología,Mouse Inalámbrico,5,25,125,Norte,Completado\nORD-109,2026-02-14,Luis Vera,Oficina,Silla Ergonómica,1,150,150,Oeste,Cancelado\nORD-110,2026-02-18,Elena M,Tecnología,Laptop Pro 15,1,1200,1200,Este,Completado': 'categórica'}
+2026-08-13 07:59:37 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 07:59:37 | INFO     | DataVision | missing_values | Nulos totales: 0
+2026-08-13 07:59:37 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 07:59:59 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 07:59:59 | INFO     | DataVision | missing_values | Nulos totales: 0
+2026-08-13 07:59:59 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:00:25 | INFO     | DataVision | load_file | Iniciando carga de archivo: Nuevo Microsoft Excel Worksheet.xlsx
+2026-08-13 08:00:25 | INFO     | DataVision | load_file | Archivo cargado: Nuevo Microsoft Excel Worksheet.xlsx | Filas: 10 | Columnas: 6
+2026-08-13 08:00:25 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:00:25 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Empresa': 'texto', 'Unnamed: 1': 'numérica', 'AGROPECABOL': 'texto', 'Unnamed: 3': 'numérica', 'Unnamed: 4': 'texto', 'Unnamed: 5': 'texto'}
+2026-08-13 08:00:33 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:00:33 | INFO     | DataVision | missing_values | Nulos totales: 37
+2026-08-13 08:00:33 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 1
+2026-08-13 08:00:33 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Unnamed: 1'
+2026-08-13 08:00:33 | INFO     | DataVision | detect_outliers | Outliers en 'Unnamed: 1': 0
+2026-08-13 08:02:01 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:02:01 | INFO     | DataVision | missing_values | Nulos totales: 37
+2026-08-13 08:02:01 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 1
+2026-08-13 08:02:01 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Unnamed: 1'
+2026-08-13 08:02:01 | INFO     | DataVision | detect_outliers | Outliers en 'Unnamed: 1': 0
+2026-08-13 08:05:32 | INFO     | DataVision | load_file | Iniciando carga de archivo: Nuevo Microsoft Excel Worksheet.xlsx
+2026-08-13 08:05:32 | INFO     | DataVision | load_file | Archivo cargado: Nuevo Microsoft Excel Worksheet.xlsx | Filas: 10 | Columnas: 6
+2026-08-13 08:05:32 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:05:32 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Empresa': 'texto', 'Unnamed: 1': 'numérica', 'AGROPECABOL': 'texto', 'Unnamed: 3': 'numérica', 'Unnamed: 4': 'texto', 'Unnamed: 5': 'texto'}
+2026-08-13 08:05:37 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:05:37 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:05:37 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:05:37 | INFO     | DataVision | missing_values | Nulos totales: 37
+2026-08-13 08:05:37 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:05:37 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 1
+2026-08-13 08:05:37 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Unnamed: 1'
+2026-08-13 08:05:37 | INFO     | DataVision | detect_outliers | Outliers en 'Unnamed: 1': 0
+2026-08-13 08:05:43 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:05:43 | INFO     | DataVision | distribution_plot | Creando histogram para 'Unnamed: 1'
+2026-08-13 08:05:52 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:05:52 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:05:52 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:06:18 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:06:18 | INFO     | DataVision | distribution_plot | Creando histogram para 'Unnamed: 1'
+2026-08-13 08:06:23 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:06:23 | INFO     | DataVision | comparison_plot | Creando comparación: Unnamed: 1 agrupado por Empresa (mean)
+2026-08-13 08:06:41 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:06:41 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:06:41 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:07:10 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:07:10 | INFO     | DataVision | comparison_plot | Creando comparación: Unnamed: 1 agrupado por Empresa (mean)
+2026-08-13 08:07:24 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:07:27 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:07:27 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Empresa
+2026-08-13 08:12:22 | INFO     | DataVision | load_file | Iniciando carga de archivo: Nuevo Microsoft Excel Worksheet.xlsx
+2026-08-13 08:12:22 | INFO     | DataVision | load_file | Archivo cargado: Nuevo Microsoft Excel Worksheet.xlsx | Filas: 10 | Columnas: 6
+2026-08-13 08:12:22 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:12:22 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Empresa': 'texto', 'Unnamed: 1': 'numérica', 'AGROPECABOL': 'texto', 'Unnamed: 3': 'numérica', 'Unnamed: 4': 'texto', 'Unnamed: 5': 'texto'}
+2026-08-13 08:12:24 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:12:24 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:12:24 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:12:24 | INFO     | DataVision | missing_values | Nulos totales: 37
+2026-08-13 08:12:24 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:12:24 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 1
+2026-08-13 08:12:24 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Unnamed: 1'
+2026-08-13 08:12:24 | INFO     | DataVision | detect_outliers | Outliers en 'Unnamed: 1': 0
+2026-08-13 08:12:30 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:12:30 | INFO     | DataVision | distribution_plot | Creando histogram para 'Unnamed: 1'
+2026-08-13 08:12:37 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:12:37 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:12:37 | WARNING  | DataVision | correlation_heatmap | Pocos datos numéricos completos
+2026-08-13 08:12:37 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:12:42 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:12:49 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:12:51 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:12:51 | INFO     | DataVision | distribution_plot | Creando histogram para 'Unnamed: 1'
+2026-08-13 08:13:03 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:05 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:07 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:07 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Empresa
+2026-08-13 08:13:09 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:10 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Unnamed: 5
+2026-08-13 08:13:11 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:11 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Unnamed: 4
+2026-08-13 08:13:12 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:12 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para AGROPECABOL
+2026-08-13 08:13:13 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:13 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Empresa
+2026-08-13 08:13:15 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:16 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:16 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:13:16 | WARNING  | DataVision | correlation_heatmap | Pocos datos numéricos completos
+2026-08-13 08:13:16 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:13:19 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:53 | INFO     | DataVision | load_file | Iniciando carga de archivo: Nuevo Microsoft Excel Worksheet.xlsx
+2026-08-13 08:13:53 | INFO     | DataVision | load_file | Archivo cargado: Nuevo Microsoft Excel Worksheet.xlsx | Filas: 10 | Columnas: 6
+2026-08-13 08:13:53 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:13:53 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Empresa': 'texto', 'Unnamed: 1': 'numérica', 'AGROPECABOL': 'texto', 'Unnamed: 3': 'numérica', 'Unnamed: 4': 'texto', 'Unnamed: 5': 'texto'}
+2026-08-13 08:13:54 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:13:54 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:13:54 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:13:54 | INFO     | DataVision | missing_values | Nulos totales: 37
+2026-08-13 08:13:54 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:13:54 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 1
+2026-08-13 08:13:55 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Unnamed: 1'
+2026-08-13 08:13:55 | INFO     | DataVision | detect_outliers | Outliers en 'Unnamed: 1': 0
+2026-08-13 08:13:59 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:13:59 | INFO     | DataVision | distribution_plot | Creando histogram para 'Unnamed: 1'
+2026-08-13 08:14:01 | INFO     | DataVision | render_ml_training | Renderizando ML Training
+2026-08-13 08:14:10 | INFO     | DataVision | load_file | Iniciando carga de archivo: metricas_modelo.csv
+2026-08-13 08:14:10 | INFO     | DataVision | load_file | Archivo cargado: metricas_modelo.csv | Filas: 1 | Columnas: 3
+2026-08-13 08:14:10 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:14:10 | INFO     | DataVision | detect_column_types | Tipos detectados: {'R2': 'numérica', 'MAE': 'numérica', 'RMSE': 'numérica'}
+2026-08-13 08:14:18 | INFO     | DataVision | load_file | Iniciando carga de archivo: datos_procesados.csv
+2026-08-13 08:14:18 | INFO     | DataVision | load_file | Archivo cargado: datos_procesados.csv | Filas: 60255 | Columnas: 10
+2026-08-13 08:14:18 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:14:18 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Year': 'categórica', 'Industry_aggregation_NZSIOC': 'categórica', 'Industry_code_NZSIOC': 'categórica', 'Industry_name_NZSIOC': 'categórica', 'Units': 'categórica', 'Variable_code': 'categórica', 'Variable_name': 'categórica', 'Variable_category': 'categórica', 'Value': 'numérica', 'Industry_code_ANZSIC06': 'categórica'}
+2026-08-13 08:14:20 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:14:20 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:14:20 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:14:20 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:14:20 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:14:20 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:14:20 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:14:20 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:14:20 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:14:23 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:23 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:14:28 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:28 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:14:28 | INFO     | DataVision | correlation_heatmap | Matriz de correlación calculada: (2, 2)
+2026-08-13 08:14:28 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:14:30 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:33 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:35 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:35 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:14:35 | INFO     | DataVision | correlation_heatmap | Matriz de correlación calculada: (2, 2)
+2026-08-13 08:14:35 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:14:39 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:14:39 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:14:46 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:07 | INFO     | DataVision | load_file | Iniciando carga de archivo: datos_procesados.csv
+2026-08-13 08:16:08 | INFO     | DataVision | load_file | Archivo cargado: datos_procesados.csv | Filas: 60255 | Columnas: 10
+2026-08-13 08:16:08 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:16:08 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Year': 'categórica', 'Industry_aggregation_NZSIOC': 'categórica', 'Industry_code_NZSIOC': 'categórica', 'Industry_name_NZSIOC': 'categórica', 'Units': 'categórica', 'Variable_code': 'categórica', 'Variable_name': 'categórica', 'Variable_category': 'categórica', 'Value': 'numérica', 'Industry_code_ANZSIC06': 'categórica'}
+2026-08-13 08:16:10 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:16:10 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:16:10 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:16:10 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:16:10 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:16:10 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:16:10 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:16:10 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:16:10 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:16:13 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:13 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:16:18 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:18 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (mean)
+2026-08-13 08:16:18 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:16:34 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:36 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:36 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:16:39 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:39 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:16:39 | INFO     | DataVision | correlation_heatmap | Matriz de correlación calculada: (2, 2)
+2026-08-13 08:16:39 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:16:41 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:41 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (mean)
+2026-08-13 08:16:41 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:16:42 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:42 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Industry_aggregation_NZSIOC
+2026-08-13 08:16:43 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:16:44 | INFO     | DataVision | render_ml_training | Renderizando ML Training
+2026-08-13 08:16:46 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:16:46 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:16:46 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:16:46 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:16:46 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:16:46 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:16:46 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:16:46 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:16:46 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:20:40 | INFO     | DataVision | load_file | Iniciando carga de archivo: datos_procesados.csv
+2026-08-13 08:20:40 | INFO     | DataVision | load_file | Archivo cargado: datos_procesados.csv | Filas: 60255 | Columnas: 10
+2026-08-13 08:20:40 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:20:40 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Year': 'categórica', 'Industry_aggregation_NZSIOC': 'categórica', 'Industry_code_NZSIOC': 'categórica', 'Industry_name_NZSIOC': 'categórica', 'Units': 'categórica', 'Variable_code': 'categórica', 'Variable_name': 'categórica', 'Variable_category': 'categórica', 'Value': 'numérica', 'Industry_code_ANZSIC06': 'categórica'}
+2026-08-13 08:20:42 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:20:42 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:20:47 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:20:47 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (mean)
+2026-08-13 08:20:47 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:20:51 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:20:51 | INFO     | DataVision | correlation_heatmap | Creando mapa de calor de correlación
+2026-08-13 08:20:51 | INFO     | DataVision | correlation_heatmap | Matriz de correlación calculada: (2, 2)
+2026-08-13 08:20:51 | INFO     | DataVision | scatter_matrix | Creando matriz de dispersión
+2026-08-13 08:20:54 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:20:54 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Industry_aggregation_NZSIOC
+2026-08-13 08:24:20 | INFO     | DataVision | load_file | Iniciando carga de archivo: datos_procesados.csv
+2026-08-13 08:24:20 | INFO     | DataVision | load_file | Archivo cargado: datos_procesados.csv | Filas: 60255 | Columnas: 10
+2026-08-13 08:24:20 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:24:20 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Year': 'categórica', 'Industry_aggregation_NZSIOC': 'categórica', 'Industry_code_NZSIOC': 'categórica', 'Industry_name_NZSIOC': 'categórica', 'Units': 'categórica', 'Variable_code': 'categórica', 'Variable_name': 'categórica', 'Variable_category': 'categórica', 'Value': 'numérica', 'Industry_code_ANZSIC06': 'categórica'}
+2026-08-13 08:24:22 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:24:22 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:24:23 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:24:23 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:24:23 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:24:23 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:24:23 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:24:23 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:24:23 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:24:28 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:24:28 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:24:46 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:24:46 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:24:46 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:24:46 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:24:46 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:24:46 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:24:46 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:24:46 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:24:46 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:24:48 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:24:48 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:24:54 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:24:54 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (mean)
+2026-08-13 08:24:54 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:32:11 | INFO     | DataVision | load_file | Iniciando carga de archivo: datos_procesados.csv
+2026-08-13 08:32:12 | INFO     | DataVision | load_file | Archivo cargado: datos_procesados.csv | Filas: 60255 | Columnas: 10
+2026-08-13 08:32:12 | INFO     | DataVision | detect_column_types | Detectando tipos de columnas...
+2026-08-13 08:32:12 | INFO     | DataVision | detect_column_types | Tipos detectados: {'Year': 'categórica', 'Industry_aggregation_NZSIOC': 'categórica', 'Industry_code_NZSIOC': 'categórica', 'Industry_name_NZSIOC': 'categórica', 'Units': 'categórica', 'Variable_code': 'categórica', 'Variable_name': 'categórica', 'Variable_category': 'categórica', 'Value': 'numérica', 'Industry_code_ANZSIC06': 'categórica'}
+2026-08-13 08:32:14 | INFO     | DataVision | render_inspection | Renderizando Inspección
+2026-08-13 08:32:14 | INFO     | DataVision | type_distribution_pie | Creando gráfico de pastel de tipos
+2026-08-13 08:32:14 | INFO     | DataVision | missing_values | Calculando valores nulos...
+2026-08-13 08:32:14 | INFO     | DataVision | missing_values | Nulos totales: 15331
+2026-08-13 08:32:14 | INFO     | DataVision | missing_values_plot | Creando gráfico de valores nulos
+2026-08-13 08:32:14 | INFO     | DataVision | duplicate_rows | Filas duplicadas: 0
+2026-08-13 08:32:14 | INFO     | DataVision | detect_outliers | Detectando outliers en columna 'Value'
+2026-08-13 08:32:14 | INFO     | DataVision | detect_outliers | Outliers en 'Value': 8230
+2026-08-13 08:32:14 | INFO     | DataVision | outlier_plot | Creando box plot para outliers en 'Value'
+2026-08-13 08:32:18 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:18 | INFO     | DataVision | distribution_plot | Creando histogram para 'Year'
+2026-08-13 08:32:23 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:23 | INFO     | DataVision | distribution_plot | Creando box para 'Year'
+2026-08-13 08:32:25 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:25 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (mean)
+2026-08-13 08:32:25 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:32:32 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:32 | INFO     | DataVision | comparison_plot | Creando comparación: Year agrupado por Industry_aggregation_NZSIOC (count)
+2026-08-13 08:32:32 | INFO     | DataVision | comparison_plot | Datos agrupados: 3 categorías
+2026-08-13 08:32:34 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:37 | INFO     | DataVision | render_dashboard | Renderizando Dashboard
+2026-08-13 08:32:37 | INFO     | DataVision | pie_chart | Creando gráfico de pastel para Industry_aggregation_NZSIOC

@@ -84,7 +84,7 @@ def render_export():
         key="pdf_sections"
     )
 
-    if st.button("📄 Generar Reporte PDF", type="primary", use_container_width=True):
+    if st.button("📄 Generar Reporte PDF", type="primary", width='stretch'):
         with st.spinner("🔄 Generando reporte PDF..."):
             try:
                 # Preparar estadísticas
@@ -154,4 +154,4 @@ def render_export():
     col2.metric("Columnas", len(df.columns))
     memory = df.memory_usage(deep=True).sum() / 1024**2
     col3.metric("Tamaño en memoria", f"{memory:.2f} MB")
-    st.dataframe(df.head(), use_container_width=True)
+    st.dataframe(df.head(), width='stretch')

@@ -62,12 +62,12 @@ def render_upload():
                 
                 # Preview de datos
                 st.markdown("### 👁️ Vista Previa (Primeras 10 filas)")
-                st.dataframe(df.head(10), use_container_width=True)
+                st.dataframe(df.head(10), width='stretch')
                 
                 # Información de columnas
                 with st.expander("🔍 Ver tipos de datos detectados", expanded=False):
                     types_df = DataLoader.get_column_types_dataframe(st.session_state.col_types)
-                    st.dataframe(types_df, use_container_width=True)
+                    st.dataframe(types_df, width='stretch')
                 
             except Exception as e:
                 st.error(f"❌ Error al cargar el archivo: {str(e)}")
