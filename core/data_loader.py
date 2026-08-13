@@ -9,7 +9,6 @@ import warnings
 logger = setup_logging()
 
 class DataLoader:
-    """Maneja la carga de archivos y detección de tipos de datos."""
 
     CATEGORICAL_NAME_PATTERNS = [
         'id', 'year', 'año', 'codigo', 'code', 'numero', 'nro', 'zip', 'postal'
